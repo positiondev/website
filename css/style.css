@@ -8,13 +8,17 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-face: sans-serif;
+  text-align: center;
+}
+
 h2,h3 {
   color: #DC2727;
   font-family: Arial, sans-serif;
   font-weight: normal;
 }
 h2 { border-bottom: 1px solid #DC2727 }
-h3 { text-align: center }
 h4 { margin: 0px; font-weight: normal }
 
 #top-wrap {
@@ -116,6 +120,11 @@ h4 { margin: 0px; font-weight: normal }
   padding: 0px 10px;
 }
 
+#index .contact {
+  width: 300px;
+  margin: 10px auto;
+}
+
 
 #index  .service {
   padding-left: 55px;
@@ -123,10 +132,10 @@ h4 { margin: 0px; font-weight: normal }
 }
 #index .service  p { margin: 0px; margin-bottom: 10px }
 
-#index .service#ruby { background: url("../img/Services_ruby.png") no-repeat top left }
-#index .service#haskell { background: url("../img/Services_haskell.png") no-repeat top left }
-#index .service#python { background: url("../img/Services_python.png") no-repeat top left }
-#index .service#postgres { background: url("../img/Services_postgres.png") no-repeat top left }
+#index .service#ruby { background: url("../img/Services_ruby.png") no-repeat 0 15px }
+#index .service#haskell { background: url("../img/Services_haskell.png") no-repeat 0 15px }
+#index .service#python { background: url("../img/Services_python.png") no-repeat 0 15px }
+#index .service#postgres { background: url("../img/Services_postgres.png") no-repeat 0 15px }
 
 #index .column.services h3 {
   margin-bottom: 0px;
