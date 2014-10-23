@@ -129,13 +129,30 @@ p {
 }
 #index .service  p { margin: 0px; margin-bottom: 10px }
 
-#index .service#ruby { background: url("../img/Services_ruby.png") no-repeat 0 15px }
-#index .service#haskell { background: url("../img/Services_haskell.png") no-repeat 0 15px }
-#index .service#python { background: url("../img/Services_python.png") no-repeat 0 15px }
-#index .service#postgres { background: url("../img/Services_postgres.png") no-repeat 0 15px }
+#index .service#ruby { background: url("../img/ruby.png") no-repeat 0 15px }
+#index .service#haskell { background: url("../img/haskell.png") no-repeat 0 15px }
+#index .service#python { background: url("../img/python.png") no-repeat 0 15px }
+#index .service#postgres { background: url("../img/postgres.png") no-repeat 0 15px }
 
 #index .column.services h3 {
   margin-bottom: 0px;
+}
+
+.project {
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.project .technologies {
+  width: 50px;
+  padding: 0 10px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.project .description {
+  width: 900px;
+  display: inline-block;
 }
 
 #contents {
@@ -154,8 +171,12 @@ p {
 }
 
 
+hr {
+  border: 0;
+  margin: 50px;
+}
 
-#work .image {
+.image {
   margin: 0;
   float: left;
   padding: 30px;
@@ -163,7 +184,7 @@ p {
   display: inline;
 }
 
-#work .caption {
+.caption {
   text-align: center;
   font-style: italic;
 }
