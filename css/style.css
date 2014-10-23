@@ -30,6 +30,10 @@ p {
   font-family: sans-serif;
 }
 
+.center {
+  text-align: center;
+}
+
 #top-wrap {
   width: 100%;
   background-color: #EFEDE4;
