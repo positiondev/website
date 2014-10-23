@@ -45,7 +45,6 @@ p {
 }
 
 #bottom {
-  width: 1100px;
   height: 160px;
   margin: 0px auto;
   background: #EFEDE4 url("../img/PD_bg_bottom.png") no-repeat bottom center;
@@ -62,83 +61,57 @@ p {
 }
 
 #wrap {
-  width: 1100px;
   overflow: hidden;
   margin: 0px auto;
   position: relative;
   padding-bottom: 30px;
 }
 
-#preload {
-  margin-left: 9999px;
-  height: 0px;
-}
-
 #header {
   height: 135px;
   position: relative;
-  background-image: url("../img/PD_bg_top.png");
+  background: transparent url("../img/PD_bg_top.png") no-repeat bottom center;
 }
+
 #header #mark a {
   display: block;
   position: absolute;
-  left: -10px;
+  left: 60px;
   top: 10px;
   width: 240px;
   height: 80px;
   background-image: url("../img/PD_logo.png");
 }
 
-#menu {
-  position: absolute;
-  right: 10px;
-  top: 50px;
-}
-
-#menu a {
-  text-decoration: none;
-  color: #000;
-  font-family: Arial, sans-serif;
-}
-
-#menu a:hover { text-decoration: underline }
-#menu a.sel { color: #DC2727 }
-
-#index #wrap { z-index: 0 }
-
-#index .who a {
+.who a {
   color: #000;
 }
 
-#index .who a:hover {
+.who a:hover {
   text-decoration: underline;
 }
 
-#index .column {
-  width: 365px;
-  margin: 0px 10px;
-  display: inline-block;
-  vertical-align: top;
+.column {
+    margin: 0px 10px;
 }
 
-#index .narrow-column {
-  width: 300px;
+.narrow-column {
   padding: 0px 10px;
 }
 
 
-#index  .service {
+.service {
   padding-left: 55px;
   padding-top: 15px;
 }
-#index .service  p { margin: 0px; margin-bottom: 10px }
+.service  p { margin: 0px; margin-bottom: 10px }
 
-#index .service#ruby { background: url("../img/ruby.png") no-repeat 0 15px }
-#index .service#haskell { background: url("../img/haskell.png") no-repeat 0 15px }
-#index .service#python { background: url("../img/python.png") no-repeat 0 15px }
-#index .service#postgres { background: url("../img/postgres.png") no-repeat 0 15px }
+.service#ruby { background: url("../img/ruby.png") no-repeat 0 15px }
+.service#haskell { background: url("../img/haskell.png") no-repeat 0 15px }
+.service#python { background: url("../img/python.png") no-repeat 0 15px }
+.service#postgres { background: url("../img/postgres.png") no-repeat 0 15px }
 
-#index .column.services h3 {
+.column.services h3 {
   margin-bottom: 0px;
 }
 
@@ -148,32 +121,13 @@ p {
 }
 
 .project .technologies {
-  width: 50px;
   padding: 0 10px;
   vertical-align: top;
-  display: inline-block;
 }
 
 .project .description {
-  width: 900px;
-  display: inline-block;
+  padding: 0 10px;
 }
-
-#contents {
-  min-height: 100px;
-  margin-bottom: -70px;
-  position: relative;
-  z-index: 2;
-}
-
-#contents #graphic { height: 420px }
-#contents #graphic .img { text-align: center; }
-#contents p {
-  color: #DC2727;
-  width: 400px;
-  min-height: 100px;
-}
-
 
 hr {
   border: 0;
@@ -195,4 +149,41 @@ hr {
 
 .clearfix {
   clear: both;
+}
+@media (min-width: 1100px) {
+
+  #bottom, #wrap {
+    width: 1100px;
+  }
+  .column {
+    width: 365px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .narrow-column {
+    width: 300px;
+  }
+
+  .project .technologies {
+    width: 50px;
+    display: inline-block;
+  }
+  .project .description {
+    width: 900px;
+    display: inline-block;
+  }
+
+}
+
+@media (max-width: 1099px) and (min-width: 680px) {
+  .column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 679px) {
+  #header {
+    height: 200px !important;
+  }
 }
