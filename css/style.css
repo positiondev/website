@@ -18,8 +18,17 @@ h2,h3 {
   font-family: Arial, sans-serif;
   font-weight: normal;
 }
+h3 {
+  font-size: 16pt;
+}
 h2 { border-bottom: 1px solid #DC2727 }
 h4 { margin: 0px; font-weight: normal }
+
+p {
+  font-size: 1.1em;
+  line-height: 1.3em;
+  font-family: sans-serif;
+}
 
 #top-wrap {
   width: 100%;
@@ -32,7 +41,7 @@ h4 { margin: 0px; font-weight: normal }
 }
 
 #bottom {
-  width: 960px;
+  width: 1100px;
   height: 160px;
   margin: 0px auto;
   background: #EFEDE4 url("../img/PS_bg_bottom.png") no-repeat bottom center;
@@ -49,7 +58,7 @@ h4 { margin: 0px; font-weight: normal }
 }
 
 #wrap {
-  width: 960px;
+  width: 1100px;
   overflow: hidden;
   margin: 0px auto;
   position: relative;
@@ -92,37 +101,25 @@ h4 { margin: 0px; font-weight: normal }
 #menu a.sel { color: #DC2727 }
 
 #index #wrap { z-index: 0 }
-#index #more-info {
-  z-index: 20;
-  position: relative;
-  padding-top: 50px;
-  margin-bottom: -50px;
-  color: #DC2727;
-  font-size: 0.9em;
+
+#index .who a {
+  color: #000;
 }
-#index #more-info a { text-decoration: underline }
-#index #montage {
-  z-index: -1;
-  margin-top: -40px;
+
+#index .who a:hover {
+  text-decoration: underline;
 }
 
 #index .column {
-  width: 315px;
+  width: 365px;
   margin: 0px 10px;
   display: inline-block;
   vertical-align: top;
 }
 
-#index .column p { font-size: 0.9em }
-
 #index .narrow-column {
-  width: 260px;
-  padding: 0px 10px;
-}
-
-#index .contact {
   width: 300px;
-  margin: 10px auto;
+  padding: 0px 10px;
 }
 
 
