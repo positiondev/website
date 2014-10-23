@@ -22,11 +22,11 @@ h3 {
   font-size: 16pt;
 }
 h2 { border-bottom: 1px solid #DC2727 }
-h4 { margin: 0px; font-weight: normal }
+h4 { margin-top: 0px; margin-bottom: 5px; }
 
 p {
   font-size: 1.1em;
-  line-height: 1.3em;
+  line-height: 1.5em;
   font-family: sans-serif;
 }
 
