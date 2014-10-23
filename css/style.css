@@ -150,6 +150,10 @@ hr {
   display: inline;
 }
 
+.image img {
+  border: 5px solid #d3d5d2;
+}
+
 .caption {
   text-align: center;
   font-style: italic;
