@@ -1,2 +1,2 @@
 deploy:
-	scp -r * positioncoop@positiondev.com:
+	scp -r * positioncoop@wiki.positiondev.com:
