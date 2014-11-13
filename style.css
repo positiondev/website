@@ -1,0 +1,171 @@
+body {
+	font-family: "Aktiv Grotesk", sans-serif;
+}
+
+h1 {
+	font-size: 52px;
+	line-height: 1.1em;
+	letter-spacing: -1px;
+	margin: 20px 0 25px 0;
+}
+
+h2 {
+
+}
+
+h3 {
+	font-size: 28px;
+	line-height: 1.4em;
+	padding-left: 10px
+}
+
+h4 {
+	font-size: 18px;
+	line-height: 1.1em;
+	margin: 0 0 0 0;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.6em;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#top-wrap {
+	border-bottom: 2px solid #000000;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+#wrap {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#header p {
+	line-height: 1.4em;
+}
+
+#main {
+	width: 960px;
+	margin: 200px auto 0 auto;
+}
+
+.logo {
+	display: inline-block;
+	vertical-align: top;
+	width: 320px;
+	margin: 0 75px 0 0;
+}
+
+.tagline {
+	display: inline-block;
+	vertical-align: top;
+	width: 240px;
+	margin: 15px 75px 0 0;
+}
+
+.info {
+	display: inline-block;
+	vertical-align: top;
+	width: 240px;
+	margin: 15px 0 0 0;
+}
+
+.section {
+	margin: 70px 0;
+}
+
+.section-head {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	margin: 0 40px 0 0;
+}
+
+.section-content {
+	display: inline-block;
+	vertical-align: top;
+	width: 700px;
+	margin: 15px 0 0 0;
+}
+
+.col1 {
+	display: inline-block;
+	vertical-align: top;
+	width: 320px;
+	margin: 0 50px 0 0;
+}
+
+.col2 {
+	display: inline-block;
+	vertical-align: top;
+	width: 320px;
+	margin: 0 0 0 0;
+}
+
+#services img {
+	margin: 10px 0 10px 0;
+}
+
+#services p {
+	margin-bottom: 40px;
+}
+
+.project {
+	margin: 30px 0 120px 0;
+}
+
+.technologies {
+	display: inline-block;
+	vertical-align: top;
+	width: 80px;
+	margin: 30px 0 0 0;
+}
+
+.technologies img {
+	margin-bottom: 15px;
+}
+
+.description {
+	display: inline-block;
+	vertical-align: top;
+	width: 600px;
+	margin: 0 0 0 0;	
+}
+
+.image {
+	margin: 30px 0 15px 0;
+}
+
+.image img {
+	width: 400px;
+	height: auto;
+	margin-left: -15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.image .caption {
+	width: 200px;
+	display: inline-block;
+	vertical-align: bottom;
+	margin: 0 0 0 10px;	
+}
+
+.image .caption p {
+	font-size: 16px;
+	font-weight: bold;
+}
+
