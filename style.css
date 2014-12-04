@@ -31,12 +31,7 @@ p {
 }
 
 a {
-	text-decoration: none;
 	color: #000000;
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 #top-wrap {
@@ -142,7 +137,7 @@ a:hover {
 	display: inline-block;
 	vertical-align: top;
 	width: 600px;
-	margin: 0 0 0 0;	
+	margin: 0 0 0 0;
 }
 
 .image {
@@ -161,11 +156,10 @@ a:hover {
 	width: 200px;
 	display: inline-block;
 	vertical-align: bottom;
-	margin: 0 0 0 10px;	
+	margin: 0 0 0 10px;
 }
 
 .image .caption p {
 	font-size: 16px;
 	font-weight: bold;
 }
-
