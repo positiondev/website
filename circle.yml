@@ -8,7 +8,8 @@ deployment:
     branch: master
     commands:
       - sudo pip install awscli
-      - aws s3 sync *.html s3://positiondev.com/ --delete
-      - aws s3 sync *.css s3://positiondev.com/ --delete
+      - aws s3 sync index.html s3://positiondev.com/ --delete
+      - aws s3 sync work.html s3://positiondev.com/ --delete
+      - aws s3 sync style.css s3://positiondev.com/ --delete
       - aws s3 sync img s3://positiondev.com/ --delete
       - aws s3 sync fonts s3://positiondev.com/ --delete
