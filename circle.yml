@@ -1,0 +1,10 @@
+
+test:
+  override:
+    - echo 0
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - aws s3 sync . s3://positiondev.com/ --exclude circle.yml --exclude .git --delete
