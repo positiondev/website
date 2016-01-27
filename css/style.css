@@ -1,0 +1,67 @@
+body {
+  font-family: "Aktiv Grotesk", sans-serif;
+  font-size: 1.8rem;
+}
+
+h1,h2,h3 {
+  font-weight: bold;
+}
+
+hr {
+  border: 1px solid black;
+  margin-top: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+a, a:visited {
+  color: black;
+}
+
+a:hover, a:active {
+  color: #666;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+@media (min-width: 750px) {
+  .tagline {
+    margin-top: 10px;
+  }
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.clients {
+  margin-top: -30px;
+}
+
+.client {
+  width: 150px;
+  height: 120px;
+  vertical-align: bottom;
+  display: inline-block;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 35px;
+
+}
+
+.client .logo {
+  position: relative;
+  margin: 5px auto;
+  height: 100px;
+}
+
+.client .logo img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
