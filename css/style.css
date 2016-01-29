@@ -3,7 +3,7 @@ body {
   font-size: 1.8rem;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h5 {
   font-weight: bold;
 }
 
@@ -77,23 +77,44 @@ a:hover, a:active {
   display: inline-block;
   vertical-align: top;
   width: 100px;
+  color: #a396f5;
+  font-size: 50px;
 }
 
-.service h5 {
+.service h4 {
   display: inline-block;
   width: 200px;
   text-align: left;
+  font-size: 1.3em;
 }
 
+.technology .icon {
+  font-size: 30px;
+  color: #6987ef;
+}
 
+.technology h5 {
+  font-size: 1.1em;
+  width: 200px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: 28px;
+  padding-left: 50px;
+}
+
+.technology h5 span {
+  padding-right: 30px;
+}
+
+.technology p {
+  width: 300px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: 30px;
+}
 
 
 /* ICON FONTS */
-
-.icon {
-  font-size:50px;
-  color:#a396f5;
-}
 
 @font-face {
   font-family: 'icomoon';
