@@ -7,6 +7,10 @@ h1,h2,h3,h5 {
   font-weight: bold;
 }
 
+h1 a {
+  text-decoration: none;
+}
+
 hr {
   border: 1px solid black;
   margin-top: 0;
