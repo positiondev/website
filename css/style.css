@@ -40,6 +40,12 @@ a:hover, a:active {
   margin-top: -30px;
 }
 
+@media (max-width: 749px) {
+  .clients {
+    max-width: 600px;
+  }
+}
+
 .client {
   width: 150px;
   height: 120px;
@@ -48,7 +54,12 @@ a:hover, a:active {
   font-size: 1.5rem;
   text-align: center;
   padding-bottom: 35px;
+}
 
+@media (max-width: 749px) {
+  .client {
+    width: 120px;
+  }
 }
 
 .client .logo {
@@ -99,7 +110,6 @@ a:hover, a:active {
   display: inline-block;
   vertical-align: bottom;
   margin-bottom: 28px;
-  padding-left: 50px;
 }
 
 .technology h5 span {
