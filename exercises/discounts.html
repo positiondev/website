@@ -1,0 +1,92 @@
+<!doctype>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="markdown-body">
+      <h2>
+        <a id="user-content-discount-codes" class="anchor" href="#discount-codes" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Discount Codes</h2>
+      <h3>
+        <a id="user-content-problem-statement" class="anchor" href="#problem-statement" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Problem Statement</h3>
+      <p>Your task is to develop a system for processing discount codes that
+        have various features. You will be given an order with line items and
+        an optional discount code, a “database” (a Hash or Map) of products, a
+        similar “database” of discounts, and you should return the total cost
+        of the order, with the discount applied (if it can be).</p>
+      <p>The discounts can be either applicable to everything or just a certain
+        set of products, and they can be applicable to any number of copies or
+        a fixed maximum number of copies. In the case when the discount has a
+        maximum number of copies, the discount should not be applied at all to
+        a line item with more than that number, rather than trying to apply it
+        partially.</p>
+      <h4>
+        <a id="user-content-the-input" class="anchor" href="#the-input" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>The input:</h4>
+      <p>An order, which is either in Ruby:</p>
+      <div class="highlight highlight-source-ruby"><pre><span class="pl-c1">Struct</span>.<span class="pl-k">new</span>(<span class="pl-s"><span class="pl-pds">"</span>LineItem<span class="pl-pds">"</span></span>, <span class="pl-c1">:product_id</span>, <span class="pl-c1">:quantity</span>)
+          <span class="pl-c1">Struct</span>.<span class="pl-k">new</span>(<span class="pl-s"><span class="pl-pds">"</span>Order<span class="pl-pds">"</span></span>, <span class="pl-c1">:line_items</span>, <span class="pl-c1">:discount_id</span>)
+
+          sample_order1 <span class="pl-k">=</span> <span class="pl-c1">Struct</span>::<span class="pl-c1">Order</span>.<span class="pl-k">new</span>([<span class="pl-c1">Struct</span>::<span class="pl-c1">LineItem</span>.<span class="pl-k">new</span>(<span class="pl-c1">1</span>, <span class="pl-c1">1</span>)], <span class="pl-c1">nil</span>)
+          sample_order2 <span class="pl-k">=</span> <span class="pl-c1">Struct</span>::<span class="pl-c1">Order</span>.<span class="pl-k">new</span>([<span class="pl-c1">Struct</span>::<span class="pl-c1">LineItem</span>.<span class="pl-k">new</span>(<span class="pl-c1">1</span>, <span class="pl-c1">1</span>)], <span class="pl-c1">1</span>)</pre></div>
+      <p>Or in Haskell:</p>
+      <div class="highlight highlight-source-haskell"><pre><span class="pl-k">data</span> <span class="pl-c1">LineItem</span> <span class="pl-k">=</span> <span class="pl-c1">LineItem</span> { lineItemProductId <span class="pl-k">::</span> <span class="pl-c1">Int</span>, lineItemQuantity <span class="pl-k">::</span> <span class="pl-c1">Int</span> }
+          <span class="pl-k">data</span> <span class="pl-c1">Order</span> <span class="pl-k">=</span> <span class="pl-c1">Order</span> { orderLineItems <span class="pl-k">::</span> [<span class="pl-c1">LineItem</span>], orderDiscountId <span class="pl-k">::</span> <span class="pl-c1">Maybe</span> <span class="pl-c1">Int</span> }
+
+          sampleOrder1 <span class="pl-k">=</span> <span class="pl-c1">Order</span> [<span class="pl-c1">LineItem</span> <span class="pl-c1">1</span> <span class="pl-c1">1</span>] <span class="pl-c1">Nothing</span>
+          sampleOrder2 <span class="pl-k">=</span> <span class="pl-c1">Order</span> [<span class="pl-c1">LineItem</span> <span class="pl-c1">1</span> <span class="pl-c1">1</span>] (<span class="pl-c1">Just</span> <span class="pl-c1">1</span>)</pre></div>
+      <p>A “database” of discounts, which is either a Hash in Ruby:</p>
+      <div class="highlight highlight-source-ruby"><pre><span class="pl-c1">Struct</span>.<span class="pl-k">new</span>(<span class="pl-s"><span class="pl-pds">"</span>Discount<span class="pl-pds">"</span></span>, <span class="pl-c1">:percentage</span>, <span class="pl-c1">:mode</span>, <span class="pl-c1">:product_ids</span>, <span class="pl-c1">:max_copies</span>)
+
+          database <span class="pl-k">=</span> { <span class="pl-c1">1</span> =&gt; <span class="pl-c1">Struct</span>::<span class="pl-c1">Discount</span>.<span class="pl-k">new</span>(<span class="pl-c1">50</span>, <span class="pl-c1">:all</span>, <span class="pl-c1">nil</span>, <span class="pl-c1">1</span>),
+          <span class="pl-c1">2</span> =&gt; <span class="pl-c1">Struct</span>::<span class="pl-c1">Discount</span>.<span class="pl-k">new</span>(<span class="pl-c1">75</span>, <span class="pl-c1">:some</span>, [<span class="pl-c1">1</span>], <span class="pl-c1">nil</span>)
+          }</pre></div>
+      <p>Or a Map in Haskell:</p>
+      <div class="highlight highlight-source-haskell"><pre><span class="pl-k">data</span> <span class="pl-c1">Mode</span> <span class="pl-k">=</span> <span class="pl-c1">All</span> <span class="pl-k">|</span> <span class="pl-c1">Some</span> [<span class="pl-c1">Int</span>]
+          <span class="pl-k">data</span> <span class="pl-c1">Discount</span> <span class="pl-k">=</span> <span class="pl-c1">Discount</span> { discountPercentage <span class="pl-k">::</span> <span class="pl-c1">Int</span>
+          , discountVariant <span class="pl-k">::</span> <span class="pl-c1">Variant</span>
+          , discountCopies <span class="pl-k">::</span> <span class="pl-c1">Maybe</span> <span class="pl-c1">Int</span>}
+
+          database <span class="pl-k">=</span> <span class="pl-c1">Data</span><span class="pl-k">.</span><span class="pl-c1">Map</span><span class="pl-k">.</span>fromList [ (<span class="pl-c1">1</span>, <span class="pl-c1">Discount</span> <span class="pl-c1">50</span> <span class="pl-c1">All</span> (<span class="pl-c1">Just</span> <span class="pl-c1">1</span>))
+          , (<span class="pl-c1">2</span>, <span class="pl-c1">Discount</span> <span class="pl-c1">75</span> <span class="pl-c1">Some</span> [<span class="pl-c1">1</span>] <span class="pl-c1">Nothing</span>)]</pre></div>
+      <p>And a similar database of products, in Ruby:</p>
+      <div class="highlight highlight-source-ruby"><pre><span class="pl-c1">Struct</span>.<span class="pl-k">new</span>(<span class="pl-s"><span class="pl-pds">"</span>Product<span class="pl-pds">"</span></span>, <span class="pl-c1">:name</span>, <span class="pl-c1">:price</span>)
+
+          database <span class="pl-k">=</span> { <span class="pl-c1">1</span> =&gt; <span class="pl-c1">Struct</span>::product.<span class="pl-k">new</span>(<span class="pl-s"><span class="pl-pds">"</span>Black Jacobins<span class="pl-pds">"</span></span>, <span class="pl-c1">2000</span>),
+          <span class="pl-c1">2</span> =&gt; <span class="pl-c1">Struct</span>::<span class="pl-c1">Discount</span>.<span class="pl-k">new</span>(<span class="pl-s"><span class="pl-pds">"</span>Shock Doctrine<span class="pl-pds">"</span></span>, <span class="pl-c1">1500</span>)
+          }</pre></div>
+      <p>Or Haskell:</p>
+      <div class="highlight highlight-source-ruby"><pre>data <span class="pl-c1">Product</span> <span class="pl-k">=</span> <span class="pl-c1">Product</span> { productName :: <span class="pl-c1">Text</span>, productPrice :: <span class="pl-c1">Int</span> }
+
+          database <span class="pl-k">=</span> <span class="pl-c1">Data</span>.<span class="pl-c1">Map</span>.fromList [ (<span class="pl-c1">1</span>, <span class="pl-c1">Product</span> <span class="pl-s"><span class="pl-pds">"</span>Black Jacobins<span class="pl-pds">"</span></span> <span class="pl-c1">2000</span>)
+          , (<span class="pl-c1">2</span>, <span class="pl-c1">Product</span> <span class="pl-s"><span class="pl-pds">"</span>Shock Doctrine<span class="pl-pds">"</span></span> <span class="pl-c1">1500</span>)]</pre></div>
+      <h4>
+        <a id="user-content-the-output" class="anchor" href="#the-output" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>The output:</h4>
+      <p>The output should just be an integer that is the total cost, in cents
+        (rounded down).</p>
+      <h4>
+        <a id="user-content-examples" class="anchor" href="#examples" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Examples:</h4>
+      <h4>
+        <a id="user-content-extension" class="anchor" href="#extension" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Extension:</h4>
+      <p>To cover not only your ability to deliver on a fixed spec, but also
+        allow you some design creativity, we want you to expand on the
+        previous solution to cover a new type of discount. These should be
+        usable only one time, but you should be able to easily generate new
+        copies with all of the same discounts. The motivation is that you want
+        to be able to offer a partner a deal where they can generate a fixed
+        number of one-time-use redeemable discounts that all reference the
+        original discount (so, for example, if you wanted to add more items to
+        those that qualified, you could do that <span>after</span> you have already sent
+        the one-time discount to a customer).</p>
+      <p>You are welcome to add new parameters to the input, and you should add
+        at least one new function that serves to generate a new one-time
+        discount based on an existing code. You can specify how the state
+        flows, so if the input to the order total calculation function needs
+        to always get the latest input from the generating function, that’s fine.</p>
+      <h4>
+        <a id="user-content-your-solutions" class="anchor" href="#your-solutions" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Your solutions:</h4>
+      <p>Please write the solutions two the two problems in a test driven
+        manner in either Ruby or Haskell.</p>
+
+    </div>
+  </body>
+</html>
