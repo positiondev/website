@@ -25,7 +25,6 @@ a, a:visited {
 a:hover, a:active {
   color: #666;
 }
-
 .container {
   max-width: 1200px;
 }
@@ -74,6 +73,13 @@ a:hover, a:active {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+img.wayland.logo {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 500px;
 }
 
 .service {
@@ -125,6 +131,17 @@ a:hover, a:active {
 .footer {
   margin-bottom: 2em;
   text-align: center;
+}
+
+button.stripe-button-el  {
+  display: block !important;
+  margin: 3em auto !important;
+}
+.stripe-button-el span {
+  display: block;
+  min-height: 36px !important;
+  line-height: 36px !important;
+  text-transform: none !important;
 }
 
 /* ICON FONTS */
