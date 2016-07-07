@@ -44,11 +44,11 @@
         <div class="three columns">
           &nbsp;
         </div>
-        
+
         <div class="nine columns">
           <h2>We're not currently hiring, but...</h2>
 
-          <p>If you're interested in being contacted when positions are available, feel free to leave us your e-mail! 
+          <p>If you're interested in being contacted when positions are available, feel free to leave us your e-mail!
           We won't contact you for any other reason.</p>
 
           <div class="job-alert-form">
@@ -63,7 +63,7 @@
         <div class="three columns">
          <h2>About us</h2>
         </div>
-        
+
         <div class="nine columns">
           <p>We're a software development company who
           serves <strong>leftist and independent media
@@ -84,17 +84,6 @@
               </div>
               <a href="https://www.versobooks.com" target="_blank">
                 Verso Books
-              </a>
-            </div> <!-- .client -->
-
-            <div class="client">
-              <div class="logo">
-                <a href="https://www.criterion.com" target="_blank">
-                  <img title="The Criterion Collection" src="img/logo_criterion.gif"/>
-                </a>
-              </div>
-              <a href="https://www.criterion.com" target="_blank">
-                The Criterion Collection
               </a>
             </div> <!-- .client -->
 
@@ -152,6 +141,18 @@
                 Real Food Challenge
               </a>
             </div> <!-- .client -->
+
+            <div class="client">
+              <div class="logo">
+                <a href="https://www.criterion.com" target="_blank">
+                  <img title="The Criterion Collection" src="img/logo_criterion.gif"/>
+                </a>
+              </div>
+              <a href="https://www.criterion.com" target="_blank">
+                The Criterion Collection
+              </a>
+            </div> <!-- .client -->
+
           </div><!-- .clients -->
 
         &nbsp;
@@ -166,15 +167,15 @@
           an act of love</a>.
          </p>
 
-         <p>We think diversity is important and encourage applications from members 
-         of groups underrepresented in tech. We don't discriminate on the basis of age, 
-         color, creed, disability, gender identity or expression, gender, genetics, 
-         marital status, military status, national origin or ancestry, race, religion, 
+         <p>We think diversity is important and encourage applications from members
+         of groups underrepresented in tech. We don't discriminate on the basis of age,
+         color, creed, disability, gender identity or expression, gender, genetics,
+         marital status, military status, national origin or ancestry, race, religion,
          or sexual orientation.</p>
 
           <p>We’re a small team based in a beautiful open office space
           in Brooklyn, New York, that is also a venue for radical
-          activity in the city. The technologies we use are Ruby on Rails, 
+          activity in the city. The technologies we use are Ruby on Rails,
           Haskell, JavaScript, Postgres/MySQL, Git, and AWS.</p>
         </div>
 
@@ -210,15 +211,15 @@
 
         $.ajax({
           url: googleDrive,
-          data: {   
-          "entry.1207210582": email 
+          data: {
+          "entry.1207210582": email
           },
           type: "POST",
           dataType: "xml",
           statusCode: {
             0: function () {
              $('#success-msg').html("Got it. We'll let you know when we're hiring!");
-              clear();               
+              clear();
             }
           }
           });
