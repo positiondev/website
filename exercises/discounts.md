@@ -9,7 +9,7 @@ So, if possible, document your process, any questions you had, or any assumption
 ## Discount Codes
 
 Our task is to develop a system for processing discount codes for our ecommerce app.
-We need to take take orders with and without discount codes, determine the total cost, 
+We need to take orders with and without discount codes, determine the total cost, 
 and print out a nicely formatted result.
 
 Don't worry too much if your solution doesn't isn't formatted exactly like the examples or doesn't have all of the features. The key is that the output should be legible, and the total should be correct.
